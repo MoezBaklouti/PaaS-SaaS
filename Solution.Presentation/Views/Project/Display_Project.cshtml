@@ -1,0 +1,11 @@
+﻿@model Solution.Presentation.Models.ProjectVM
+@{string path = "~/Content/Upload/" + @Model.ImageUrl;}
+<div style="float:left; margin:5px;">
+    <p>@Model.Titre</p>
+    <img alt="Film" src="@Url.Content(path)" width="50" height="50" />
+    <p>@Model.Description</p>
+    <p>@Model.Branche</p>
+    <p>@Html.ActionLink("Details", "Details", new { id = Model.Id })</p>
+    <p>@Html.ActionLink("Edit", "Edit", new { id = Model.Id })</p>
+    <p>@Html.ActionLink("Delete", "Delete", new { id = Model.Id })</p>
+</div>
